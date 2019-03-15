@@ -2,7 +2,7 @@ Ontwikkeldocument bevat:
 
 - Een beschrijving van de eisen aan het systeem. Dat houdt in dat alle onduidelijkheden uit de opdracht gehaald zijn en zorgvuldig 
   geformuleerd zijn en dat een en ander overzichtelijk is opgeschreven.
- Analyse klassendiagram met uitleg van de keuzes die gemaakt zijn.
+- Analyse klassendiagram met uitleg van de keuzes die gemaakt zijn.
 - Design klassendiagram met uitleg van de keuzes die gemaakt zijn. In deze uitleg moet duidelijk blijken dat aan de eisen van een 
   kwalitatief goed ontwerp voldaan is.
 - Tenminste 1 zinvolle methode/klasse moet getest zijn met code coverage in JUnit. Beschrijf de geplande testen en de bevindingen 
