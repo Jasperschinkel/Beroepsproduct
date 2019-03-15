@@ -1,9 +1,32 @@
 Ontwikkeldocument bevat:
 
-- Een beschrijving van de eisen aan het systeem. Dat houdt in dat alle onduidelijkheden uit de opdracht gehaald zijn en zorgvuldig geformuleerd zijn en dat een en ander overzichtelijk is opgeschreven.
+- Een beschrijving van de eisen aan het systeem. Dat houdt in dat alle onduidelijkheden uit de opdracht gehaald zijn en zorgvuldig 
+  geformuleerd zijn en dat een en ander overzichtelijk is opgeschreven.
  Analyse klassendiagram met uitleg van de keuzes die gemaakt zijn.
-- Design klassendiagram met uitleg van de keuzes die gemaakt zijn. In deze uitleg moet duidelijk blijken dat aan de eisen van een kwalitatief goed ontwerp voldaan is.
-- Tenminste 1 zinvolle methode/klasse moet getest zijn met code coverage in JUnit. Beschrijf de geplande testen en de bevindingen (invoer, verwachte uitvoer, werkelijke uitvoer) en geef aan waarom code coverage bereikt is.
-- Tenminste 1 zinvolle methode/klasse moet getest zijn met decision coverage in JUnit. Beschrijf de geplande testen en de bevindingen (invoer, verwachte uitvoer, werkelijke uitvoer) en geef aan waarom decision coverage bereikt is.
+- Design klassendiagram met uitleg van de keuzes die gemaakt zijn. In deze uitleg moet duidelijk blijken dat aan de eisen van een 
+  kwalitatief goed ontwerp voldaan is.
+- Tenminste 1 zinvolle methode/klasse moet getest zijn met code coverage in JUnit. Beschrijf de geplande testen en de bevindingen 
+  (invoer, verwachte uitvoer, werkelijke uitvoer) en geef aan waarom code coverage bereikt is.
+- Tenminste 1 zinvolle methode/klasse moet getest zijn met decision coverage in JUnit. Beschrijf de geplande testen en de bevindingen 
+  (invoer, verwachte uitvoer, werkelijke uitvoer) en geef aan waarom decision coverage bereikt is.
 - Bij een uitbreiding: de eisen aan de uitbreiding.
 - Bij een uitbreiding: een tweede design klassendiagram  waarin ook de uitbreidingen verwerkt zijn.
+
+
+Beschrijving van het spel:
+Het spel "Sleutelbarricade" is een spel waar de speler zich in een doolhof van 10 bij 10 vlakjes bevindt. 
+Het doel van het spel is om het eindpunt te bereiken. Doordat er muren en barricades i het spel zijn, gaat dat niet zo makkelijk.
+Muren zijn objecten waar de speler niet doorheen kan. Hij zal dus een andere route moeten vinden.
+Een barricades zijn objecten waar de speler doorheen kan mits hij ee sleutel heeft. Barricades hebben verschillende waarden 
+(100,200 en 300). Als een speler een sleutel heeft met de zelfde waarde zal de barricade verdwijnen.
+
+Sleutels hebben, net als barricades, verschillende soorten waaden (100, 200 en 300), die in een barricade met dezelfde waarde passen. 
+Als de speler een sleutel gebruikt is verdwijnt de sleutel uit het spel en kan het niet nog een gebruikt worden. Als je een sleutel hebt
+opgepakt, kan je hem niet meer terugleggen. Je moet dan de sleutel bij een barricade gebruiken of een andere sleutel oppakken.
+De speler maar 1 sleuten tergelijketijd dragen. Als hij een sleutel oppakt terwijl hij al een sleutel draagt, verdwijnt de andere sleutel 
+en zal de speler waarschijnlijk opnieuw moeten beginnen omdat hij dan niet verder kan.
+
+uiteindelijk zal de speler door goed na te denken het eindpunt halen. Als dit niet lukt (doordat je vast zit), heb je de optie om het spel
+te resetten, je begint dan opnieuw.
+
+Besturing: Je speelt het spel met de pijltjestoetsen.
