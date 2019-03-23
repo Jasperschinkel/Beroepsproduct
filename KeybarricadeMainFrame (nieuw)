@@ -1,0 +1,75 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class KeybarricadeMainFrame extends JFrame {
+
+
+    /**
+     * De initialisaties van de JPanels, de playingField zelf, het grid zelf en de 2d array voor de grootte van het grid.
+     * Ook zijn de afmetingen van het speelveld geinitialiseerd en de titel van het Speelveld.
+     */
+    private static int[][] playingfieldSize;
+    private JPanel playingField;
+    private JPanel playingfieldGrid;
+
+    private static final String TITLE = "Playingfield";
+    private static final int FRAME_WIDTH = 400;
+    private static final int FRAME_HEIGHT = 400;
+
+    /**
+     *
+     *
+     */
+    public KeybarricadeMainFrame(){
+
+        this.setTitle(TITLE);
+        this.setSize(FRAME_WIDTH, FRAME_HEIGHT);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        playingfieldSize = new int[10][10];
+
+
+        playingField = new JPanel();
+        playingField.setLayout(new BorderLayout());
+        playingField.setBackground(Color.LIGHT_GRAY);
+
+        playingfieldGrid = new JPanel();
+        playingfieldGrid.setLayout(new GridLayout (playingfieldSize.length, playingfieldSize[0].length));
+
+        playingField.add(playingfieldGrid, BorderLayout.CENTER);
+        playingfieldGrid.setBackground(Color.LIGHT_GRAY);
+
+        this.drawGridPanel();
+        this.add(playingField);
+        this.setResizable(false);
+        this.setVisible(true);
+    }
+
+    private void drawGridPanel() {
+        playingfieldGrid.removeAll();
+
+        int[][] playingfieldSize = {
+                {0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
+                {0, 1, 0, 0, 0, 1, 1, 1, 1, 0},
+                {0, 1, 0, 0, 0, 1, 0, 0, 1, 0},
+                {0, 1, 0, 1, 1, 1, 0, 0, 1, 0},
+                {0, 1, 0, 0, 0, 1, 0, 0, 1, 0},
+                {0, 1, 1, 1, 0, 1, 0, 0, 1, 0},
+                {0, 1, 1, 1, 0, 1, 0, 0, 1, 0},
+                {0, 1, 1, 1, 0, 1, 0, 0, 1, 0},
+                {0, 1, 1, 1, 0, 1, 0, 0, 1, 0},
+                {0, 0, 0, 0, 0, 1, 0, 0, 1, 0}
+        };
+
+        for (int x = 0; x < playingfieldSize.length; x++) {
+            for (int y = 0; y < playingfieldSize[x].length; y++) {
+                if (playingfieldSize[x][y] == 0) {
+                    playingfieldGrid.add(new Grass());
+                }
+                if (playingfieldSize[x][y] == 1) {
+                    playingfieldGrid.add(new Wall());
+                }
+            }
+            playingfieldGrid.revalidate();
+        }
+    }
+}
