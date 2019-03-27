@@ -3,50 +3,45 @@ import java.awt.*;
 
 public class KeybarricadeMainFrame extends JFrame {
 
-
-    /**
-     * De initialisaties van de JPanels, de playingField zelf, het grid zelf en de 2d array voor de grootte van het grid.
-     * Ook zijn de afmetingen van het speelveld geinitialiseerd en de titel van het Speelveld.
-     */
-    private static int[][] playingfieldSize;
-    private JPanel playingField;
+    //field
+    private int[][] playingfieldSize;
+    private JPanel playingfield;
     private JPanel playingfieldGrid;
 
-    private static final String TITLE = "Playingfield";
-    private static final int FRAME_WIDTH = 400;
-    private static final int FRAME_HEIGHT = 400;
+    //tiles
+    private ImageIcon grass = new ImageIcon("C:\\Users\\Joost\\IdeaProjects\\Keybarricade\\src\\tiles\\grass.png");
+    private ImageIcon wall = new ImageIcon("C:\\Users\\Joost\\IdeaProjects\\Keybarricade\\src\\tiles\\wall.png");
 
-    /**
-     *
-     *
-     */
+    //frame
+    private static final String TITLE = "Speelveld";
+    private static final int FRAME_WIDTH = 600;
+    private static final int FRAME_HEIGHT = 600;
+
     public KeybarricadeMainFrame(){
 
         this.setTitle(TITLE);
         this.setSize(FRAME_WIDTH, FRAME_HEIGHT);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        playingfieldSize = new int[10][10];
 
-
-        playingField = new JPanel();
-        playingField.setLayout(new BorderLayout());
-        playingField.setBackground(Color.LIGHT_GRAY);
+        playingfield = new JPanel();
+        playingfield.setLayout(new BorderLayout());
+        playingfield.setBackground(Color.LIGHT_GRAY);
 
         playingfieldGrid = new JPanel();
-        playingfieldGrid.setLayout(new GridLayout (playingfieldSize.length, playingfieldSize[0].length));
+        playingfieldGrid.setLayout(new GridLayout(10,10));
+        playingfieldSize = new int[10][10];
 
-        playingField.add(playingfieldGrid, BorderLayout.CENTER);
+        playingfield.add(playingfieldGrid, BorderLayout.CENTER);
         playingfieldGrid.setBackground(Color.LIGHT_GRAY);
 
         this.drawGridPanel();
-        this.add(playingField);
-        this.setResizable(false);
-        this.setVisible(true);
-    }
+        this.add(playingfield);
 
+        this.setVisible(true);
+
+    }
     private void drawGridPanel() {
         playingfieldGrid.removeAll();
-
         int[][] playingfieldSize = {
                 {0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
                 {0, 1, 0, 0, 0, 1, 1, 1, 1, 0},
@@ -63,13 +58,15 @@ public class KeybarricadeMainFrame extends JFrame {
         for (int x = 0; x < playingfieldSize.length; x++) {
             for (int y = 0; y < playingfieldSize[x].length; y++) {
                 if (playingfieldSize[x][y] == 0) {
-                    playingfieldGrid.add(new Grass());
+                    playingfieldGrid.add(new JLabel(grass));
                 }
+
                 if (playingfieldSize[x][y] == 1) {
-                    playingfieldGrid.add(new Wall());
+                    playingfieldGrid.add(new JLabel(wall));
                 }
             }
-            playingfieldGrid.revalidate();
         }
+        playingfieldGrid.revalidate();
     }
+
 }
