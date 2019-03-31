@@ -34,7 +34,7 @@ public class Frame {
     private static JLabel timelbl;
 
     public static void main(String[] args) {
-        MainFrame mf = new MainFrame();
+        KeybarricadeMainFrame mf = new KeybarricadeMainFrame();
 
         JFrame frame = new JFrame();
         frame.setTitle(TITLE);
