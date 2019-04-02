@@ -8,23 +8,23 @@ public class Playfield extends JFrame {
         Playfield p = new Playfield();
     }
 
-    private static final String TITLE = "Test";
+    private static final String TITLE = "Playfield";
     private static final int FRAME_WIDTH = 650;
     private static final int FRAME_HEIGHT = 650;
 
     // ATTRIBUTES
     protected static int keyValue = 0;
     protected static String[][] grid = { //spaties zijn er om array leesbaar te houden
-            {"p", "g", "g", "w", "g", "g", "w", "g", "w", "g"},
-            {"g", "k100", "g", "b100", "g", "g", "w", "g", "w", "g"},
-            {"w", "w", "w", "w", "g", "g", "g", "g", "g", "g"},
-            {"w", "w", "w", "w", "g", "w", "g", "g", "g", "w"},
-            {"g", "g", "g", "g", "g", "g", "w", "w", "w", "g"},
-            {"g", "b100", "b100", "g", "g", "k100", "g", "g", "g", "g"},
-            {"g", "b200", "b200", "g", "g", "k200", "g", "g", "g", "g"},
-            {"g", "b300", "b300", "g", "g", "k300", "g", "g", "g", "g"},
-            {"g", "g", "g", "g", "g", "g", "g", "g", "w", "b100"},
-            {"g", "g", "g", "g", "g", "g", "g", "g", "b100", "f"}
+            {"p", "g",    "g",    "w",    "g", "g",    "w", "g", "w",   "g"},
+            {"g", "k100", "g",    "b100", "g", "g",    "w", "g", "w",   "g"},
+            {"w", "w",    "w",    "w",    "g", "g",    "g", "g", "g",   "g"},
+            {"w", "w",    "w",    "w",    "g", "w",    "g", "g", "g",   "w"},
+            {"g", "g",    "g",    "g",    "g", "g",    "w", "w", "w",   "g"},
+            {"g", "b100", "b100", "g",    "g", "k100", "g", "g", "g",   "g"},
+            {"g", "b200", "b200", "g",    "g", "k200", "g", "g", "g",    "g"},
+            {"g", "b300", "b300", "g",    "g", "k300", "g", "g", "g",   "g"},
+            {"g", "g",    "g",    "g",    "g", "g",    "g", "g", "w",   "b100"},
+            {"g", "g",   "g",     "g",    "g", "g",    "g", "g", "b100", "f"}
     };
 
     // FIELD
@@ -138,6 +138,4 @@ public class Playfield extends JFrame {
                 fieldGrid.revalidate();
             }
         }
-
-
     }
