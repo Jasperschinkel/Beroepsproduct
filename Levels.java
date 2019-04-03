@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Levels {
 
     /**
@@ -19,12 +17,6 @@ public class Levels {
             {"w", "w", "k300", "w", "k300", "w", "k200", "w", "b100", "f"}
     };
 
-    //public final static String[][] originalLvl1 = Arrays.copyOf(lvl1, lvl1.length);
-    //public static String[][] copiedArray = new String[10][10];
-
-
-
-
     public static String[][] lvl2 = { //level 2
             {"p", "w", "w", "w", "w", "g", "b300", "b300", "w", "w"},
             {"g", "w", "w", "w", "w", "g", "w", "b300", "b300", "k100"},
@@ -38,33 +30,7 @@ public class Levels {
             {"k200", "g", "w", "k300", "w", "b300", "b300", "b300", "w", "f"}
     };
 
-    public final static String[][] originalLvl2 = { //level 2
-            {"p", "w", "w", "w", "w", "g", "b300", "b300", "w", "w"},
-            {"g", "w", "w", "w", "w", "g", "w", "b300", "b300", "k100"},
-            {"g", "w", "w", "w", "w", "g", "w", "w", "w", "w"},
-            {"g", "k100", "g", "g", "g", "g", "g", "g", "g", "g"},
-            {"w", "b100", "w", "b100", "w", "b300", "w", "w", "w", "b200"},
-            {"g", "g", "w", "b200", "w", "b200", "b200", "b200", "b200", "b200"},
-            {"g", "w", "w", "b200", "w", "b200", "w", "w", "w", "b100"},
-            {"g", "g", "w", "b200", "w", "b200", "w", "b300", "b300", "b300"},
-            {"w", "g", "w", "b200", "w", "b200", "w", "b300", "w", "b100"},
-            {"k200", "g", "w", "k300", "w", "b300", "b300", "b300", "w", "f"}
-    };
-
     public static String[][] lvl3 = { //level 3
-            {"p", "w", "k300", "g", "g", "g", "g", "g", "w", "w"},
-            {"g", "w", "w", "w", "w", "w", "w", "g", "w", "w"},
-            {"g", "b300", "g", "g", "g", "k200", "w", "g", "w", "w"},
-            {"g", "w", "w", "w", "w", "w", "w", "g", "w", "w"},
-            {"g", "g", "g", "g", "g", "k300", "w", "g", "w", "w"},
-            {"b200", "w", "w", "w", "w", "w", "w", "g", "w", "w"},
-            {"g", "w", "k100", "g", "w", "g", "g", "g", "w", "w"},
-            {"g", "w", "g", "g", "b300", "g", "w", "g", "g", "b300"},
-            {"g", "w", "w", "w", "w", "w", "w", "g", "w", "b100"},
-            {"g", "g", "g", "g", "g", "g", "g", "g", "w", "f"}
-    };
-
-    public final static String[][] originalLvl3 = { //level 3
             {"p", "w", "k300", "g", "g", "g", "g", "g", "w", "w"},
             {"g", "w", "w", "w", "w", "w", "w", "g", "w", "w"},
             {"g", "b300", "g", "g", "g", "k200", "w", "g", "w", "w"},
